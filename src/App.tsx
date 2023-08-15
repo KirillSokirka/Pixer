@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Helmet } from "react-helmet";
 
-function App() {
+import Layout from "./components/Layout/Layout";
+import Routes from "./Routes";
+import GlobalStyles from "./styles/globalStyles";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { HeaderProvider } from "./contexts/HeaderContext";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <HeaderProvider>
+        <GlobalStyles />
+        <Helmet>
+          <title>React - Pixer App</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Helmet>
+        <Layout>
+          <Routes />
+        </Layout>
+      </HeaderProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
