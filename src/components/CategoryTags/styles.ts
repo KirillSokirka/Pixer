@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { sizes } from "../../styles/variables";
 
-const SCategoryTagListContainer = styled.div`
-  max-width: 100%;
-  overflow-x: scroll;
-`;
-
 const SCategoryTagList = styled.div`
   position: relative;
   display: flex;
@@ -13,6 +8,9 @@ const SCategoryTagList = styled.div`
   gap: 14px;
   white-space: nowrap;
   margin-top: 14px;
+  width: 100%;
+
+  overflow-x: auto;
 `;
 
 const SCategoryTag = styled.div`
@@ -36,4 +34,4 @@ const SCategoryTag = styled.div`
   }
 `;
 
-export { SCategoryTagList, SCategoryTag, SCategoryTagListContainer };
+export { SCategoryTagList, SCategoryTag };

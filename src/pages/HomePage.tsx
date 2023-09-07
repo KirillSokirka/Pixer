@@ -66,7 +66,9 @@ const HomePage = () => {
             </ListSection>
           </div>
           <div>
-            {/* <CategoryTagList /> */}
+            <CategoryTagListWrapper>
+              <CategoryTagList />
+            </CategoryTagListWrapper>
             <ListSection title="Latest Products">
               <LatestProductsSection />
             </ListSection>
@@ -87,7 +89,7 @@ const SHomePage = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: -3px;
-    gap: 20px;
+    overflow: scroll;
   }
 
   @media (max-width: ${sizes.mobile.width}) {
@@ -113,6 +115,11 @@ const MobileButtonsSection = styled.div`
 const MobileButton = styled.div<{ active: boolean }>`
   color: ${props => (props.active ? "#D5D5D5" : "#989898")};
   cursor: "pointer";
+`;
+
+const CategoryTagListWrapper = styled.div`
+  overflow-x: auto;
+  max-width: 600px;
 `;
 
 export default HomePage;
