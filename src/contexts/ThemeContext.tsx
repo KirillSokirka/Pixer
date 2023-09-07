@@ -5,7 +5,9 @@ import { lightTheme, darkTheme } from "../styles/themes";
 
 interface ThemeContextType {
   theme: ThemeInterface;
+  isSideBarOpen: boolean;
   setTheme: React.Dispatch<React.SetStateAction<ThemeInterface>>;
+  setIsSideBarOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
@@ -16,13 +18,16 @@ interface ThemeProviderProps {
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<ThemeInterface>(darkTheme);
+  const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setTheme(theme === lightTheme ? lightTheme : darkTheme);
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ setTheme, theme }}>
+    <ThemeContext.Provider
+      value={{ setTheme, theme, isSideBarOpen, setIsSideBarOpen }}
+    >
       <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );

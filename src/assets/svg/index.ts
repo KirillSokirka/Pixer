@@ -11,6 +11,13 @@ import { ReactComponent as Person } from "./person.svg";
 import { ReactComponent as Search } from "./search.svg";
 import { ReactComponent as Burger } from "./burger.svg";
 import { ReactComponent as Dots } from "./dots.svg";
+import { ReactComponent as Divider } from "./divider.svg";
+import { ReactComponent as Verified } from "./publisher.svg";
+import { ReactComponent as ThumbUp } from "./thumb-up.svg";
+import { ReactComponent as Comment } from "./comments.svg";
+import { ReactComponent as Bookmark } from "./bookmark.svg";
+import { ReactComponent as Link } from "./link.svg";
+import { ReactComponent as Notification } from "./notification.svg";
 
 export {
   Authors,
@@ -26,4 +33,11 @@ export {
   Search,
   Burger,
   Dots,
+  Divider,
+  Verified,
+  ThumbUp,
+  Comment,
+  Bookmark,
+  Link,
+  Notification,
 };

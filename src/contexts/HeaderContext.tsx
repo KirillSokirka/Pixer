@@ -30,7 +30,7 @@ const HeaderProvider = ({ children }: HeaderProviderProps) => {
       setHeaderConfig({
         withSearch: true,
         expandedSearch: headerConfig.expandedSearch,
-        sideBarToggle: window.matchMedia("(max-width: 774px)").matches,
+        sideBarToggle: window.matchMedia("(max-width: 1200px)").matches,
         withlogo: window.matchMedia("(max-width: 774px)").matches,
         logoSmall: window.matchMedia("(max-width: 430px)").matches,
       });

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { HeaderContext } from "./HeaderContext";
+import { useState, useEffect } from "react";
+import { sizes } from "../styles/variables";
 
 const useThemeContext = () => {
   const context = useContext(ThemeContext);
@@ -22,4 +24,30 @@ const useHeaderContext = () => {
   return context;
 };
 
-export { useHeaderContext, useThemeContext };
+const useResponsive = () => {
+  const [mobileView, setMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (
+        window.matchMedia(`(max-width: ${sizes.smallScreen.width})`).matches
+      ) {
+        setMobileView(true);
+      } else {
+        setMobileView(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return { mobileView };
+};
+
+export { useHeaderContext, useThemeContext, useResponsive };

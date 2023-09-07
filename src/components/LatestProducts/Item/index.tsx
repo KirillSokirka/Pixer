@@ -1,22 +1,22 @@
 import React from "react";
-import { SItem, SImage, SInfo } from "./styles";
-import { IAuthor } from "../interfaces";
+import { SItem, SImage, SInfo, STitle, SAdditionalInfo } from "./styles";
+import { Divider } from "../../../assets/svg";
 
-export interface ItemProps {
-  image: string;
-  title: string;
-  author: IAuthor;
-  date: string;
-}
+import Author from "../../Author";
+import { ILatestProduct } from "../../interfaces";
 
-const Item = ({ image, title, author, date }: ItemProps) => {
+const Item = ({ image, title, author, date }: ILatestProduct) => {
   return (
     <SItem>
-      <SImage />
+      <SImage src={image} />
       <SInfo>
-        <div>{title}</div>
-        <div>{author.name}</div>
-        <div>{`${date} Day's ago `}</div>
+        <STitle>{title}</STitle>
+        <Author {...author} isSmall={true} />
+        <SAdditionalInfo>
+          <p>{`${date} Day's ago `}</p>
+          <Divider />
+          <p>View Products</p>
+        </SAdditionalInfo>
       </SInfo>
     </SItem>
   );

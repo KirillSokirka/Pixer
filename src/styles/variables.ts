@@ -25,13 +25,19 @@ const btnReset = css`
 
 const sizes = {
   mobile: {
-    width: `450px`,
+    width: `460px`,
     left: `13px`,
-    padding: `10px 13px`,
+    padding: `10px 5px`,
     categoryTag: `16px`,
   },
   tablet: {
     width: `744px`,
+    left: `28px`,
+    padding: `20px 15px`,
+    categoryTag: `16px`,
+  },
+  smallScreen: {
+    width: `1200px`,
     left: `28px`,
     padding: `51px 28px`,
     categoryTag: `16px`,
@@ -44,4 +50,21 @@ const sizes = {
   },
 };
 
-export { v, btnReset, sizes };
+const authorStyles = {
+  small: {
+    logoSize: "32px",
+    nameSize: "12px",
+    folowersSize: "10px",
+    marginSize: "5px",
+    starSize: "20px",
+  },
+  default: {
+    logoSize: "42px",
+    nameSize: "24px",
+    folowersSize: "14px",
+    marginSize: "11px",
+    starSize: "27.5px",
+  },
+};
+
+export { v, btnReset, sizes, authorStyles };

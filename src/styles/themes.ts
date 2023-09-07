@@ -1,12 +1,4 @@
-interface ThemeInterface {
-  sidebarBackground: string;
-  sidebarColor: string;
-  mainBackground: string;
-  mainColor: string;
-  buttonBorder: string;
-  buttonBg: string;
-  svgFill: string;
-}
+import { ThemeInterface } from "./theme";
 
 const lightTheme: ThemeInterface = {
   sidebarBackground: "#FFF",
@@ -16,6 +8,10 @@ const lightTheme: ThemeInterface = {
   buttonBorder: "#F8F8F8;",
   buttonBg: "#ECECEC;",
   svgFill: "black",
+  scrollbarThumbColor: "#ECECEC;",
+  scrollbarThumbHoverColor: "#ececec2f;",
+  scrollbarTrackColor: "#ECECEC;",
+  topProductsBg: "#F3F3F3",
 };
 
 const darkTheme: ThemeInterface = {
@@ -26,6 +22,10 @@ const darkTheme: ThemeInterface = {
   buttonBorder: "#171717",
   buttonBg: "#212121;",
   svgFill: "#808080",
+  scrollbarThumbColor: "#2A2A2A",
+  scrollbarThumbHoverColor: "#ececec2f;",
+  scrollbarTrackColor: "#2A2A2A",
+  topProductsBg: "#212121",
 };
 
 export { lightTheme, darkTheme };

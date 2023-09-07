@@ -3,20 +3,20 @@ import styled from "styled-components";
 const SHeader = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 `;
 
 const SHeaderMobile = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: auto;
+  width: 100%;
 `;
 
 const SHeaderMobileRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const SHeaderTitle = styled.p`
@@ -25,11 +25,9 @@ const SHeaderTitle = styled.p`
 
 const SButtons = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: flex-end;
-  align-items: center;
   gap: 27.909px;
+  justify-content: space-between;
+  margin-left: auto;
 `;
 
 export { SHeader, SHeaderTitle, SButtons, SHeaderMobile, SHeaderMobileRow };

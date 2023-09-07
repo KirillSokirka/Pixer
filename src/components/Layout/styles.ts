@@ -3,9 +3,10 @@ import { sizes } from "../../styles/variables";
 
 const SLayout = styled.div`
   display: flex;
+  flex-direction: row;
 `;
 
-const SMain = styled.main`
+const SMain = styled.div`
   width: 100%;
   font-size: 21.442px;
   padding: ${sizes.desktop.padding};
@@ -19,4 +20,4 @@ const SMain = styled.main`
   }
 `;
 
-export { SLayout, SMain };
+export { SMain, SLayout };

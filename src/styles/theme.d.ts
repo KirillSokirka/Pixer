@@ -5,6 +5,13 @@ interface ThemeInterface extends DefaultTheme {
   sidebarColor: string;
   mainBackground: string;
   mainColor: string;
+  buttonBorder: string;
+  buttonBg: string;
+  svgFill: string;
+  scrollbarTrackColor: string;
+  scrollbarThumbColor: string;
+  scrollbarThumbHoverColor: string;
+  topProductsBg: string;
 }
 
 export { ThemeInterface };

@@ -9,8 +9,9 @@ const SSidebar = styled.div<IOPenable>`
     !isOpen ? v.navLogoTopMarginClosed : v.navLogoTopMarginOpen};
   background-color: ${({ theme }) => theme.sidebarBackground};
   color: ${({ theme }) => theme.sidebarColor};
-  min-height: 100vh;
-  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export { SSidebar };
